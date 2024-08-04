@@ -36,7 +36,7 @@ export const Blocks: React.FC<{
 
             if (Block) {
               return (
-                <div className="my-16" key={index}>
+                <div className="grid-span-3col" key={index}>
                   {/* @ts-expect-error */}
                   <Block id={toKebabCase(blockName)} {...block} />
                 </div>
