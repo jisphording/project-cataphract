@@ -46,14 +46,11 @@
     "react-dom": "19.0.0-rc-6230622a1a-20240610",
     "react-hook-form": "7.45.4",
     "sharp": "0.32.6",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
     "@payloadcms/db-postgres": "3.0.0-beta.67"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
     "@payloadcms/eslint-config": "^1.1.1",
-    "@tailwindcss/typography": "^0.5.13",
     "@types/escape-html": "^1.0.2",
     "@types/node": "18.11.3",
     "@types/react": "npm:types-react@19.0.0-rc.0",
@@ -64,7 +61,6 @@
     "eslint-config-next": "15.0.0-canary.58",
     "postcss": "^8.4.38",
     "prettier": "^3.0.3",
-    "tailwindcss": "^3.4.3",
     "typescript": "5.5.4"
   },
   "engines": {
