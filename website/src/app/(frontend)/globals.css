@@ -1,8 +1,54 @@
-:root {
-  background-color: rgb(16, 16, 16);
+/* RESET */
 
-  /* TYPOGRAPHY */
-  color: rgb(225, 225, 225);
-  font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
+:root {
+    background-color: rgb(16, 16, 16);
+
+    /* TYPOGRAPHY */
+    color: rgb(225, 225, 225);
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* FLEXBOX */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* GRIDS */
+
+/* COLUMNS */
+
+/* Create a 12 Column grid */
+.grid-12col {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+}
+
+/* Span content across 8 columns */
+.grid-span-8col {
+    grid-column: 3 / span 8;
+}
+
+/* Span content across 4 columns */
+.grid-span-4col {
+    grid-column: span 4;
+}
+
+/* Span content across 3 columns */
+.grid-span-3col {
+    grid-column: span 3;
+}
+
+/* TEMPORARY DEV STYLES */
+
+header, footer {
+    display: none;
 }
