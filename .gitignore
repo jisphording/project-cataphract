@@ -19,7 +19,7 @@ public/media/
 # debug
 
 # local env files
-*/.env
+*.env
 */.env.example
 
 # vercel
