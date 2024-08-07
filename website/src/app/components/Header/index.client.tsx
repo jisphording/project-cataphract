@@ -15,10 +15,11 @@ interface HeaderClientProps {
 
 export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
   /* Storing the value in a useState to avoid hydration errors */
-  const [theme, setTheme] = useState(null)
-  const { headerTheme, setHeaderTheme } = useHeaderTheme()
+  /* const [theme, setTheme] = useState(null) */
+  // const { headerTheme, setHeaderTheme } = useHeaderTheme() */
   const pathname = usePathname()
 
+  {/*}
   useEffect(() => {
     setHeaderTheme(null)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -28,11 +29,12 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ header }) => {
     if (headerTheme !== theme) setTheme(headerTheme)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [headerTheme])
+  */}
 
   return (
     <header
       className="flex"
-      {...(theme ? { 'data-theme': theme } : {})}
+      {/* {...(theme ? { 'data-theme': theme } : {})} */}
     >
       <Link href="/">
         <Logo />

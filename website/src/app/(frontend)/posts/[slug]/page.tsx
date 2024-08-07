@@ -12,7 +12,7 @@ import type { Post } from '../../../../payload-types'
 
 import { PostHero } from '../../../heros/PostHero'
 import { generateMeta } from '../../../utilities/generateMeta'
-import PageClient from './page.client'
+//import PageClient from './page.client'
 
 export async function generateStaticParams() {
     const payload = await getPayloadHMR({ config: configPromise })
@@ -33,8 +33,8 @@ export default async function Post({ params: { slug = '' } }) {
     if (!post) return <PayloadRedirects url={url} />
 
     return (
-        <article className="flex grid-12col">
-            <PageClient />
+        <article className="flex grid-12col content">
+            {/* <PageClient /> */}
 
             {/* Allows redirects for valid pages too */}
             <PayloadRedirects disableNotFound url={url} />
@@ -47,9 +47,9 @@ export default async function Post({ params: { slug = '' } }) {
                     enableGutter={false}
                 />
 
-                <RelatedPosts
+                {/*<RelatedPosts
                 docs = { post.relatedPosts.filter((post) => typeof post === 'object') }
-                />
+                /> */}
             </div>
         </article>
   )
@@ -58,7 +58,7 @@ export default async function Post({ params: { slug = '' } }) {
 export async function generateMetadata({ params: { slug } }): Promise<Metadata> {
   const post = await queryPostBySlug({ slug })
 
-  return generateMeta({ doc: post })
+  // return generateMeta({ doc: post })
 }
 
 const queryPostBySlug = cache(async ({ slug }: { slug: string }) => {

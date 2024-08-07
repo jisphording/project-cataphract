@@ -15,25 +15,26 @@ import { mergeOpenGraph } from '../utilities/mergeOpenGraph'
 import './globals.css'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>
-      <head>
-        <InitTheme />
-        <link href="/favicon.ico" rel="icon" sizes="32x32" />
-        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
-      </head>
-      <body className='flex'>
-        <Providers>
-          <AdminBar />
-          <LivePreviewListener />
+    return (
+        <html lang='en'>
+        {/*<html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>*/}
+        <head>
+            {/* <InitTheme /> */}
+            <link href="/favicon.ico" rel="icon" sizes="32x32" />
+            <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+        </head>
+        <body className='flex'>
+            {/*<Providers>*/}
+            {/*<AdminBar />*/}
+            {/*<LivePreviewListener />*/}
 
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
-      </body>
-    </html>
-  )
+            {/*<Header />*/}
+            { children }
+            {/*<Footer />*/}
+            {/*</Providers>*/}
+        </body>
+        </html>
+    )
 }
 
 export const metadata: Metadata = {

@@ -14,32 +14,29 @@ export async function Footer() {
 
     return (
         <footer className="flex">
-        
+
             <div>
-
-                <div>
-                    <p>This Website is powered by:</p>
-                    
-                    <Link  href="/">
-                    <picture>
-                        <img
-                        alt="Payload Logo"
-                        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
-                        />
-                    </picture>
-                    </Link>
-                </div>
-
-                <div>
-                    <ThemeSelector />
-                    <nav>
-                        {navItems.map(({ link }, i) => {
-                        return <CMSLink key={i} {...link} />
-                        })}
-                    </nav>
-                </div>
-
+                <p>This Website is powered by:</p>
+                
+                <Link href="/">
+                <picture>
+                    <img
+                    alt="Payload Logo"
+                    src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
+                    />
+                </picture>
+                </Link>
             </div>
+
+            <div>
+                {/*<ThemeSelector />*/}
+                <nav>
+                    {navItems.map(({ link }, i) => {
+                    return <CMSLink key={i} {...link} />
+                    })}
+                </nav>
+            </div>
+
 
         </footer>
     )
