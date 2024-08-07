@@ -1,6 +1,5 @@
 import type { StaticImageData } from 'next/image'
 
-import { cn } from '@/utilities/cn'
 import React from 'react'
 import RichText from 'src/app/components/RichText'
 
@@ -9,60 +8,38 @@ import type { Page } from '../../../payload-types'
 import { Media } from '../../components/Media'
 
 type Props = Extract<Page['layout'][0], { blockType: 'mediaBlock' }> & {
-  breakout?: boolean
-  captionClassName?: string
-  className?: string
-  enableGutter?: boolean
-  id?: string
-  imgClassName?: string
-  staticImage?: StaticImageData
+    breakout?: boolean
+    captionClassName?: string
+    className?: string
+    enableGutter?: boolean
+    id?: string
+    imgClassName?: string
+    staticImage?: StaticImageData
 }
 
 export const MediaBlock: React.FC<Props> = (props) => {
-  const {
-    captionClassName,
-    className,
-    enableGutter = true,
-    imgClassName,
-    media,
-    position = 'default',
-    staticImage,
-  } = props
-
-  let caption
-  if (media && typeof media === 'object') caption = media.caption
-
-  return (
-    <div
-      className={cn(
-        '',
-        {
-          container: position === 'default' && enableGutter,
-        },
+    const {
+        captionClassName,
         className,
-      )}
-    >
-      {position === 'fullscreen' && (
-        <div className="relative">
-          <Media resource={media} src={staticImage} />
+        enableGutter = true,
+        imgClassName,
+        media,
+        position = 'default',
+        staticImage,
+    } = props
+
+    let caption
+    if (media && typeof media === 'object') caption = media.caption
+
+    return (
+        <div className = 'media-block'>
+            <div className="relative">
+                <Media resource={media} src={staticImage} />
+            </div>
+            <Media imgClassName='imgClassName' resource={media} src={staticImage} />
+            <div>
+                <RichText content={caption} enableGutter={false} />
+            </div>
         </div>
-      )}
-      {position === 'default' && (
-        <Media imgClassName={cn('rounded', imgClassName)} resource={media} src={staticImage} />
-      )}
-      {caption && (
-        <div
-          className={cn(
-            'mt-6',
-            {
-              container: position === 'fullscreen',
-            },
-            captionClassName,
-          )}
-        >
-          <RichText content={caption} enableGutter={false} />
-        </div>
-      )}
-    </div>
-  )
+    )
 }

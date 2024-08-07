@@ -1,4 +1,3 @@
-import { cn } from '@/utilities/cn'
 import React from 'react'
 
 import { serializeLexical } from './serialize'
@@ -21,16 +20,7 @@ const RichText: React.FC<Props> = ({
   }
 
   return (
-    <div
-      className={cn(
-        {
-          'container ': enableGutter,
-          'max-w-none': !enableGutter,
-          'mx-auto prose dark:prose-invert ': enableProse,
-        },
-        className,
-      )}
-    >
+    <div>
       {content &&
         !Array.isArray(content) &&
         typeof content === 'object' &&

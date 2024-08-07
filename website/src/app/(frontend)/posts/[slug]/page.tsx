@@ -6,6 +6,7 @@ import configPromise from '@payload-config'
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import { draftMode, headers } from 'next/headers'
 import React, { cache } from 'react'
+import Button from 'src/app/components/Button'
 import RichText from 'src/app/components/RichText'
 
 import type { Post } from '../../../../payload-types'
@@ -47,6 +48,8 @@ export default async function Post({ params: { slug = '' } }) {
                     enableGutter={false}
                 />
 
+                <Button />
+
                 {/*<RelatedPosts
                 docs = { post.relatedPosts.filter((post) => typeof post === 'object') }
                 /> */}
@@ -58,7 +61,7 @@ export default async function Post({ params: { slug = '' } }) {
 export async function generateMetadata({ params: { slug } }): Promise<Metadata> {
   const post = await queryPostBySlug({ slug })
 
-  // return generateMeta({ doc: post })
+  return generateMeta({ doc: post })
 }
 
 const queryPostBySlug = cache(async ({ slug }: { slug: string }) => {

@@ -1,5 +1,4 @@
 'use client'
-import { cn } from '@/utilities/cn'
 import useClickableCard from '@/utilities/useClickableCard'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
@@ -29,10 +28,7 @@ export const Card: React.FC<{
 
   return (
     <article
-      className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
-        className,
-      )}
+      className='border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer'
       ref={card.ref}
     >
       <div className="relative w-full ">

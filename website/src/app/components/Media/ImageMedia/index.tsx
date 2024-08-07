@@ -2,7 +2,6 @@
 
 import type { StaticImageData } from 'next/image'
 
-import { cn } from '@/utilities/cn'
 import NextImage from 'next/image'
 import React from 'react'
 
@@ -58,7 +57,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
   return (
     <NextImage
       alt={alt || ''}
-      className={cn(imgClassName)}
+      className='next-image'
       fill={fill}
       height={!fill ? height : undefined}
       onClick={onClick}

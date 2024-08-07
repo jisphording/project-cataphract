@@ -1,4 +1,3 @@
-import { cn } from '@/utilities/cn'
 import React from 'react'
 import RichText from 'src/app/components/RichText'
 
@@ -32,9 +31,7 @@ export const ContentBlock: React.FC<
 
             return (
               <div
-                className={cn(`col-span-4 lg:col-span-${colsSpanClasses[size]}`, {
-                  'md:col-span-2': size !== 'full',
-                })}
+                className='content-block'
                 key={index}
               >
                 <RichText content={richText} enableGutter={false} />
