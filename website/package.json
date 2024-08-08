@@ -17,6 +17,7 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "3.0.0-beta.67",
     "@payloadcms/live-preview-react": "3.0.0-beta.67",
     "@payloadcms/next": "3.0.0-beta.67",
     "@payloadcms/plugin-cloud": "3.0.0-beta.67",
@@ -38,15 +39,17 @@
     "jsonwebtoken": "9.0.1",
     "lexical": "0.16.1",
     "lucide-react": "^0.378.0",
-    "next": "15.0.0-canary.58",
+    "next": "^15.0.0-rc.0",
     "payload": "3.0.0-beta.67",
     "payload-admin-bar": "^1.0.6",
+    "postcss": "^8.4.38",
+    "prettier": "^3.0.3",
     "prism-react-renderer": "^2.3.1",
-    "react": "19.0.0-rc-6230622a1a-20240610",
-    "react-dom": "19.0.0-rc-6230622a1a-20240610",
+    "react": "^19.0.0-rc-9d2da591-20240808",
+    "react-dom": "^19.0.0-rc-9d2da591-20240808",
     "react-hook-form": "7.45.4",
     "sharp": "0.32.6",
-    "@payloadcms/db-postgres": "3.0.0-beta.67"
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
@@ -59,8 +62,7 @@
     "copyfiles": "^2.4.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.0-canary.58",
-    "postcss": "^8.4.38",
-    "prettier": "^3.0.3",
+    "sass": "^1.77.8",
     "typescript": "5.5.4"
   },
   "engines": {
