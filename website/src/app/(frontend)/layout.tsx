@@ -11,7 +11,7 @@ import { LivePreviewListener } from '../components/LivePreviewListener'
 import { Providers } from '../providers'
 import { InitTheme } from '../providers/Theme/InitTheme'
 import { mergeOpenGraph } from '../utilities/mergeOpenGraph'
-import './globals.css'
+import './../css/index.scss'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     return (
