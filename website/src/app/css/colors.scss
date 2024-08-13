@@ -1,0 +1,12 @@
+/* STYLESHEET: COLOR DEFINITIONS */
+
+:root {
+    --red-crimson: rgb(182, 44, 10);
+    --offwhite: rgb(225, 225, 225);
+    --slate: rgb(16, 16, 16);  
+}
+
+html {
+    background-color: var(--red-crimson);
+    color: var(--slate);
+}
