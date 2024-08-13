@@ -32,10 +32,10 @@ export const MediaBlock: React.FC<Props> = (props) => {
     if (media && typeof media === 'object') caption = media.caption
 
     return (
-        <section className = 'media-block'>
-            <Media imgClassName='imgClassName' resource={media} src={staticImage} />
+        <section className = 'mediaBlock' >
+            <Media imgClassName = 'imgClassName' resource = { media } src = { staticImage } />
             <div>
-                <RichText content={caption} enableGutter={false} />
+                <RichText content = { caption } enableGutter = { false } />
             </div>
         </section>
     )
