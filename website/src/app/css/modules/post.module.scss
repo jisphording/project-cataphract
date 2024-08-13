@@ -1,0 +1,15 @@
+/* PAGE TYPE: POST */
+
+article.content h1,
+article.content h2,
+article.content h3,
+article.content h4,
+article.content h5,
+article.content h6 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.content p {
+  flex: 50%;
+}

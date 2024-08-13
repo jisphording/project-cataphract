@@ -1,8 +1,11 @@
 /* IMPORT MAIN STYLES */
+@use 'colors.scss';
 @use 'reset.scss';
+@use 'typography.scss';
 
 /* IMPORT SCSS MODULES */
-@use 'mediaBlock.module.scss';
+@use 'modules/mediaBlock.module.scss';
+@use 'modules/post.module.scss';
 
 /* FLEXBOX */
 
